@@ -16,13 +16,11 @@ const jakarta=Plus_Jakarta_Sans({
 })
 
 
-
-
 export const metadata:Metadata={
   title:"Tadbirlar-Intellektual tadbirlar va seminarlat platformasi",
   description:"Eng sara ilmiy, biznes va IT seminarlariga chiptalar xarid qiling va joy band qiling",
   icons:{
-    
+    icon:"https://www.istockphoto.com/illustrations/event-icon"
   }
 }
 
@@ -37,7 +35,9 @@ export default function RootLayout({
       lang="en"
       className={`${playfair.variable} ${jakarta.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="h-full w-full bg-soft-cream ">
+        <div className="container  px-4 md:px-8 lg:px-20  min-h-screen mx-auto">{children}</div>
+      </body>
     </html>
   );
 }

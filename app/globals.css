@@ -1,6 +1,88 @@
 @import "tailwindcss";
 
-:root {
+@theme {
+  /* shriftlar uchun  */
+
+  --font-serif: var(--font-playfair), serif;
+  --font-sans: var(--font-jakarta), sans-serif;
+
+  /* ranglar uchun */
+  --color-soft-cream: #fdfbf7;
+  --color-pure-white: #ffffff;
+  --color-warm-caramel: #d4a373;
+  --color-soft-olive: #8c7853;
+  --color-dark-charkoal: #2f2e2c;
+
+  --color-pastel-pending: #f4eae1;
+  --color-pastel-approved: #e2ece9;
+  --color-pastel-rejected: #fadcd9;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-serif tracking-wide;
+}
+
+body,
+p,
+span,
+button,
+input,
+textarea,
+select,
+a {
+  @apply font-sans;
+}
+
+body {
+  @apply bg-soft-cream  antialiased;
+}
+
+button,
+a {
+  @apply transition-all duration-300 ease-in-out;
+}
+
+@utility btn-primary {
+  @apply bg-warm-caramel text-pure-white font-medium px-6 py-3 rounded-xl 
+         shadow-sm shadow-warm-caramel/10 cursor-pointer transition-all duration-300;
+
+  &:hover {
+    @apply bg-warm-caramel/90 shadow-md shadow-warm-caramel/20 -translate-y-0.5;
+  }
+
+  &:active {
+    @apply translate-y-0 scale-[0.98];
+  }
+}
+
+@utility btn-secondary {
+  @apply bg-transparent text-soft-olive border border-soft-olive/30 font-medium px-6 py-3 
+         rounded-xl cursor-pointer transition-all duration-300;
+
+  &:hover {
+    @apply bg-soft-olive/5 border-soft-olive text-dark-charkoal -translate-y-0.5;
+  }
+
+  &:active {
+    @apply translate-y-0 scale-[0.98];
+  }
+}
+
+@utility seminar-card {
+  @apply bg-pure-white p-6 rounded-2xl border border-soft-olive/5 shadow-sm 
+         transition-all duration-300;
+
+  &:hover {
+    @apply shadow-md border-soft-olive/15 -translate-y-1;
+  }
+}
+
+/* :root {
   --background: #ffffff;
   --foreground: #171717;
 }
@@ -23,4 +105,4 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
-}
+} */
