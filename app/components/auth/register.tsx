@@ -8,7 +8,7 @@ export default function RegisterPage() {
     <div className="min-h-screen bg-soft-cream flex items-center justify-center p-4 md:p-8">
       <div className="w-full max-w-5xl  grid md:grid-cols-12 bg-pure-white rounded-3xl overflow-hidden border border-soft-olive/10 shadow-xl shadow-dark-charkoal/5">
         {/* left container */}
-        <div className="hidden md:col-span-5 bg-dark-charkoal md:flex p-12 flex-col justify-between relative overflow-hidden">
+        <div className="hidden md:col-span-5 bg-dark-charkoal md:flex p-16 flex-col justify-between relative overflow-hidden">
           <div className="absolute -bottom-10 -left-10 w-64 h-64 bg-soft-olive/10 rounded-full blur-3xl pointer-events-none" />
           <div className="relative z-10">
             <Logo />

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import {Playfair_Display,Plus_Jakarta_Sans } from "next/font/google";
-import "./globals.css";
+import "./globals.css"
+import {Toaster} from "sonner"
 
 const playfair=Playfair_Display({
   subsets:["latin"],
@@ -35,8 +36,9 @@ export default function RootLayout({
       lang="en"
       className={`${playfair.variable} ${jakarta.variable} h-full antialiased`}
     >
-      <body className="h-full w-full bg-soft-cream ">
-        <div className="container  px-4 md:px-8 lg:px-20  min-h-screen mx-auto">{children}</div>
+      <body className="min-h-screen">
+        {children}
+        <Toaster position="top-center" richColors closeButton/>
       </body>
     </html>
   );
