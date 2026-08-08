@@ -1,6 +1,13 @@
+"use client"
 import { ArrowUpRight, Calendar, MapPin, Sparkles, User } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 export default function EventCard() {
+  const router=useRouter()
+
+  function goDetail(){
+    router.push("/detail/56") 
+  }
   return (
     <div className="bg-pure-white border  border-dark-charkoal/10 rounded-3xl p-6 shadow-sm hover:shadow-md  transition-all flex flex-col justify-between  space-y-6 group">
       <div className="space-y-4">
@@ -31,7 +38,7 @@ export default function EventCard() {
         </div>
         </div>
       </div>
-      <button className="w-full bg-soft-olive/10 hover:bg-dark-charkoal text-dark-charkoal hover:text-pure-white py-3 rounded-xl text-xs font-semibold transition-all cursor-pointer flex  items-center justify-center gap-1.5 group/btn">
+      <button onClick={goDetail} className="w-full bg-soft-olive/10 hover:bg-dark-charkoal text-dark-charkoal hover:text-pure-white py-3 rounded-xl text-xs font-semibold transition-all cursor-pointer flex  items-center justify-center gap-1.5 group/btn">
       <span>
          {"Batafsil ko'rish"}
       </span>
